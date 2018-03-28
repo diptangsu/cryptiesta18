@@ -62,8 +62,6 @@ class QuestionsController extends Controller
         $participant1 = session()->get('participant1');
         $participant2 = session()->get('participant2');
 
-//        dd(session()->get('timeleft'));
-
         if (!array_key_exists('timeLeft', $_COOKIE))
             $timeLeft = session()->get('timeleft');
         else

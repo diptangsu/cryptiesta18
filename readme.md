@@ -1,4 +1,7 @@
-<p align="center"><img src="public/favicon.ico"> Cryptiesta18</p>
+<p align="center"><img src="public/favicon.ico"></p>
+<p align="center"><h2>Cryptiesta18</h2></p>
+
+
 
 ## About Laravel
 

@@ -1,7 +1,15 @@
 <p align="center"><img src="public/favicon.ico"></p>
-<p align="center"><h2>Cryptiesta18</h2></p>
 
+# Cryptiesta18
+This is the website of the event Cryptiesta held at AOT in Techfiesta2018, the annual techfest of AOT.
 
+This website is made using laravel.
+
+To launch this website, run the command  
+```php artisan serve```
+
+But before you do so, make sure you load the migrations/tables in the database using  
+```php artisan migrate```
 
 ## About Laravel
 

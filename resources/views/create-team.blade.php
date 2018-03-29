@@ -2,15 +2,20 @@
 
 @section('content')
 
-    <section id="content" style="margin-left: 10%; margin-right: 10%;">
+    <section id="content"
+             style="margin-left: 10%;
+             margin-right: 10%;
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <br><br>
 
         <div class="card">
             <div class="card__header">
                 <h3>Register</h3>
-                <small style="color: #ff5d31;">
+                <small style="color: #ff8b2f;">
+                    You will have to login using your team name and a password that we will generate for you.<br>
+                    Please make sure you remember you team name.<br>
                     Please be very careful while entering the details.<br>
-                    Your password will be generated based on what you enter.
+                    Your password will be generated based on what you enter.<br>
                 </small>
             </div>
 

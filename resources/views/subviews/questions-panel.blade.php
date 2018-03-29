@@ -25,13 +25,18 @@
                     @if($ques->id == $allSubmissions[$k])
                         <?php $k += $k < $n - 1 ? 1 : 0; ?>
                         <a href='/questions/{{ $ques->id }}' style="color: #3f8c42;">
+                    @else
+                        <a href='/questions/{{ $ques->id }}'>
+                            @endif
+                            @if($ques->id == $allSubmissions[$k])
+                                {{--<i class="zmdi zmdi-check-circle zmdi-hc-fw"></i>--}}
+                                <i class="zmdi zmdi-check-all zmdi-hc-fw"></i>
                             @else
-                                <a href='/questions/{{ $ques->id }}'>
-                                    @endif
-                                    <i class="zmdi zmdi-flag zmdi-hc-fw"></i>
-                                    {{ $ques->name }}
-                                    <div style="float: right; margin-right: 20px;">{{ $ques->points }}</div>
-                                </a>
+                                <i class="zmdi zmdi-flag zmdi-hc-fw"></i>
+                            @endif
+                            {{ $ques->name }}
+                            <div style="float: right; margin-right: 20px;">{{ $ques->points }}</div>
+                        </a>
                 </li>
             @endforeach
         </ul>

@@ -29,3 +29,7 @@ Route::get('/questions/{question}', 'QuestionsController@show');
 Route::post('/questions/{question}', 'SubmissionsController@store');
 
 Route::post('/timeout', 'TeamsController@timeup');
+
+Route::get('/18d4486d34a4f11b1fefe443eL', function () {
+    return "flag{1_l0v3_play1ng_w1th_r0b0t5}";
+});

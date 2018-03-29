@@ -8,15 +8,17 @@
     @endphp
     <div class="row">
         @for($i = 2; $i < $noOfFiles; $i++)
-            <div class="col-sm-2 col-xs-6">
-                @php
-                    $url = url("$dir/$files[$i]");
-                @endphp
-                <a target="_blank" href="{{ $url }}" class="btn btn-default" style="margin-bottom: 10px;">
-                    <i class="zmdi zmdi-arrow-right-top zmdi-hc-fw"></i>
-                    {{ $files[$i] }}
-                </a>
-            </div>
+            @if(!is_dir($files[$i]))
+                <div class="col-sm-2 col-xs-6">
+                    @php
+                        $url = url("$dir/$files[$i]");
+                    @endphp
+                    <a target="_blank" href="{{ $url }}" class="btn btn-default" style="margin-bottom: 10px;">
+                        <i class="zmdi zmdi-arrow-right-top zmdi-hc-fw"></i>
+                        {{ $files[$i] }}
+                    </a>
+                </div>
+            @endif
         @endfor
     </div>
 @endif

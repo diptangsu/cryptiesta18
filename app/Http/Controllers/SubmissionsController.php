@@ -25,7 +25,6 @@ class SubmissionsController extends Controller
         $teams = collect($teams);
         $teams = $teams->sortByDesc('score');
 
-
         return view('leaderboard', compact('teams'));
     }
 
@@ -61,7 +60,6 @@ class SubmissionsController extends Controller
         }
 
         $answer = request('answer');
-//        dd($answer);
 
         if ($question->name == "Password") {
             $ans = Team::where('id', $teamId)->pluck('password')[0];

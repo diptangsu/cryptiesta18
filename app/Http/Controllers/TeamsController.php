@@ -72,6 +72,22 @@ class TeamsController extends Controller
         return view('create-team');
     }
 
+    public function getPassword($name1, $name2, $num1, $num2)
+    {
+        $num = ($num1 + $num2);
+        $name1 = explode(' ', $name1);
+        $name2 = explode(' ', $name2);
+
+        $initials = '';
+        foreach ($name1 as $n)
+            $initials .= $n[0];
+        foreach ($name2 as $n)
+            $initials .= $n[0];
+
+        $password = $initials . $num;
+        return $password;
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -96,7 +112,9 @@ class TeamsController extends Controller
             'email2' => 'required'
         ]);
 
-        $password = array('password' => 'diptangsu');
+        $pass = $this->getPassword(request('participant1'), request('participant2'),
+                                    request('phone1'), request('phone2'));
+        $password = array('password' => $pass);
 
         Team::create(request([
                 'teamname',

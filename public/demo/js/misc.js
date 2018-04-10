@@ -126,7 +126,11 @@ $(document).ready(function () {
     $('#sa-title').click(function () {
         swal(
             "Generate Your Password",
-            "Bhai password ne"
+            "<font color='#b8860b'>The initials of your names and the sum of your phone numbers.</font>\n\n" +
+            "{{ e x a m p l e }}\n" +
+            "Diptangsu Goswami (9903088446),\n" +
+            "Koustav Chanda (7001590037)\n\n" +
+            "<font color='navy'>DGKC16904678483</font>"
         )
     });
 

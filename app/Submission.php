@@ -14,4 +14,9 @@ class Submission extends Model
     {
         return $query->where('teamId', $teamId);
     }
+
+    public function scopeSubmissionsPerQuestion($query)
+    {
+        return $query->get()->groupBy('questionId');
+    }
 }

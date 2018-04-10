@@ -18,7 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->string('name', 50);
             $table->text('question');
             $table->text('hint');
-            $table->string('answer', 50);
+            $table->string('answer', 90);
             $table->integer('points');
             $table->integer('negative')->default(0);
             $table->boolean('visible');

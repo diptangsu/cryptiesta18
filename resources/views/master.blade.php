@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cryptiesta</title>
+    <title>Cyber Hunt</title>
 
     <!-- Vendors -->
 
@@ -106,12 +106,12 @@
 <script src="{{ url('vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
 
 <!-- Demo Only -->
-<script src="{{ url('demo/js/flot-charts/curved-line.js') }}"></script>
+{{--<script src="{{ url('demo/js/flot-charts/curved-line.js') }}"></script>
 <script src="{{ url('demo/js/flot-charts/line.js') }}"></script>
 <script src="{{ url('demo/js/easy-pie-charts.js') }}"></script>
-{{--<script src="{{ url('demo/js/misc.js') }}"></script>--}}
+--}}{{--<script src="{{ url('demo/js/misc.js') }}"></script>--}}{{--
 <script src="{{ url('demo/js/sparkline-charts.js') }}"></script>
-<script src="{{ url('demo/js/calendar.js') }}"></script>
+<script src="{{ url('demo/js/calendar.js') }}"></script>--}}
 
 <!-- SweetAlert -->
 <script src="{{ url('vendors/bower_components/sweetalert2/dist/sweetalert2.min.js') }}"></script>

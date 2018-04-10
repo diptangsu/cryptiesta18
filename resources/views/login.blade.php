@@ -9,7 +9,8 @@
              style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             <div class="login__block__header">
                 <i class="zmdi zmdi-account-circle"></i>
-                All the best for<br>C R Y P T 1 3 5 T A
+                All the best for<br>
+                C Y B 3 R __ H U N T
 
                 <div class="actions login__block__actions">
                     <div class="dropdown-basic-demo">

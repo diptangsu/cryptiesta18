@@ -18,18 +18,14 @@
 </head>
 
 
-<body background="{{ url('/assets/CRYPT.jpg') }}" style="background-size:100% 100%; background-repeat: no-repeat;">
+<body background="{{ url('/assets/CyberHunt.jpg') }}" style="background-size:100% 100%; background-repeat: no-repeat;">
 
-<div class="glitch" data-text="CRYPT135TA" style="margin-left: 32%;">CRYPT135TA</div>
+<div class="glitch" data-text="CYBER_HUNT" style="margin-left: 32%; margin-top: -1px;">CYBER_HUNT</div>
 
 <div class="card" style="margin: 15% 35% 25%;">
-
     <a href="{{ url('/teams/create') }}" class="btn btn-primary btn-block">Register</a>
-
     <br>
-
     <a href="{{ url('/login') }}" class="btn btn-success btn-block">Login</a>
-
 </div>
 
 </body>

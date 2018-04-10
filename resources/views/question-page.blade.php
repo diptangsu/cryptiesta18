@@ -10,7 +10,7 @@
 
         @include('subviews.question-body')
 
-        {{--@include('subviews.footer')--}}
+        @include('subviews.footer')
 
     </section>
 

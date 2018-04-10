@@ -11,25 +11,30 @@ class TeamsController extends Controller
     {
         $team = Team::where('teamname', $request['teamname'])->where('password', $request['password'])->get();
 
-//        dd($team->all());
-
         if ($team->count()) {
-            $request->session()->put('teamId', $team->pluck('id')->all()[0]);
-            $request->session()->put('teamName', $team->pluck('teamname')->all()[0]);
-            $request->session()->put('participant1', $team->pluck('participant1')->all()[0]);
-            $request->session()->put('participant2', $team->pluck('participant2')->all()[0]);
-            $request->session()->put('timeleft', $team->pluck('timeleft')->all()[0]);
+            $team = $team->first();
+            $request->session()->put('teamId', $team->id);
+            $request->session()->put('teamName', $team->teamname);
+            $request->session()->put('participant1', $team->participant1);
+            $request->session()->put('participant2', $team->participant2);
+            $request->session()->put('timeleft', $team->timeleft);
 
             return redirect('/questions/1');
-        } else
+        } else {
+            $notify = Array();
+            $notify['message'] = "Wrong teamname/password";
+            $notify['type'] = 'danger';
+            request()->session()->flash('notify', $notify);
+
             return redirect('/login');
+        }
     }
 
     public function logout(Request $request)
     {
-        $teamId = session()->get('teamId');
-//        dd(Cookie::get());
-        /*$time = $_COOKIE['timeLeft'];
+        /*$teamId = session()->get('teamId');
+        dd(Cookie::get());
+        $time = $_COOKIE['timeLeft'];
         Team::where('id', $teamId)->update(['timeleft' => $time]);*/
 
         session()->flush();

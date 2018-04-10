@@ -1,5 +1,5 @@
 .glitch {
-    color: #b3b3b3;
+    color: #ffffff;
     font-size: 80px;
     position: relative;
     width: 400px;
@@ -78,7 +78,7 @@
     left: 2px;
     text-shadow: -1px 0 red;
     top: 0;
-    color: #b3b3b3;
+    color: #ffffff;
     /*background: black;*/
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
@@ -157,7 +157,7 @@
     left: -2px;
     text-shadow: 1px 0 blue;
     top: 0;
-    color: #b3b3b3;
+    color: #ffffff;
     /*background: black;*/
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);

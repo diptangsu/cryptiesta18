@@ -4,7 +4,7 @@ var animationDuration;
 
 $(window).load(function () {
     //Welcome Message (not for login page)
-    function notify(message, type) {
+    /*function notify(message, type) {
         $.notify({
             message: message
         }, {
@@ -26,7 +26,7 @@ $(window).load(function () {
                 y: 30
             }
         });
-    }
+    }*/
 
     // if (!$('.login, .four-zero')[0]) {
     //     notify('Welcome back Mallinda Hollaway', '-light');
@@ -93,7 +93,7 @@ $(document).ready(function () {
             '<span data-notify="title">{1}</span> ' +
             '<span data-notify="message">{2}</span>' +
             '<div class="progress" data-notify="progressbar">' +
-            '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0;"></div>' +
             '</div>' +
             '<a href="{3}" target="{4}" data-notify="url"></a>' +
             '</div>'
@@ -125,7 +125,7 @@ $(document).ready(function () {
     //A title with a text under
     $('#sa-title').click(function () {
         swal(
-            "Your Password is",
+            "Generate Your Password",
             "Bhai password ne"
         )
     });

@@ -1,15 +1,15 @@
 <p align="center"><img src="public/favicon.ico"></p>
 
-# Cryptiesta18
-This is the website of the event Cryptiesta held at AOT in Techfiesta2018, the annual techfest of AOT.
+# Cyber Hunt
+This is the website of the event Cyber Hunt held at AOT in Techfiesta2018, the annual techfest of AOT.
 
 This website is made using laravel.
 
-To launch this website, run the command  
-```php artisan serve```
+Run the command `composer install`
 
-But before you do so, make sure you load the migrations/tables in the database using  
-```php artisan migrate```
+Load the migrations/tables in the database using `php artisan migrate`
+
+To launch this website, run the command `php artisan serve`
 
 ## About Laravel
 

@@ -6,13 +6,14 @@
     <section id="content"
              style="margin-left: 10%; margin-right: 10%;
              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
         <br>
 
         <div class="card">
             <div class="card__header">
-                <h2>Leaderboard
+                <h2>Number of Submissions per question
                     <small>
-                        Try to reach the top! We wish you all the best!
+                        Add 1 to each of these numbers!
                     </small>
                 </h2>
             </div>
@@ -30,7 +31,7 @@
                             <th data-column-id="id" class="text-left" style="">
                                 <a href="javascript:void(0);" class="column-header-anchor sortable">
                                     <span class="text">
-                                        Position
+                                        Question Number
                                     </span>
                                     <span class="table-bootgrid__icon zmdi "></span>
                                 </a>
@@ -38,7 +39,7 @@
                             <th data-column-id="id" class="text-left" style="">
                                 <a href="javascript:void(0);" class="column-header-anchor sortable">
                                     <span class="text">
-                                        Team Name
+                                        Question Name
                                     </span>
                                     <span class="table-bootgrid__icon zmdi "></span>
                                 </a>
@@ -46,23 +47,7 @@
                             <th data-column-id="sender" class="text-left" style="">
                                 <a href="javascript:void(0);" class="column-header-anchor sortable">
                                     <span class="text">
-                                        Team Member 1
-                                    </span>
-                                    <span class="table-bootgrid__icon zmdi "></span>
-                                </a>
-                            </th>
-                            <th data-column-id="sender" class="text-left" style="">
-                                <a href="javascript:void(0);" class="column-header-anchor sortable">
-                                    <span class="text">
-                                        Team Member 2
-                                    </span>
-                                    <span class="table-bootgrid__icon zmdi "></span>
-                                </a>
-                            </th>
-                            <th data-column-id="sender" class="text-left" style="">
-                                <a href="javascript:void(0);" class="column-header-anchor sortable">
-                                    <span class="text">
-                                        Score
+                                        Number of Submissions
                                     </span>
                                     <span class="table-bootgrid__icon zmdi "></span>
                                 </a>
@@ -74,27 +59,12 @@
 
                         @php
                             $i = 1;
-                            $color = "";
                         @endphp
-                        @foreach($teams as $team)
-                            @php
-                                if ($i == 1)
-                                    $color = "#fc58e6";
-                                elseif ($i == 2)
-                                    $color = "#FFD700";
-                                elseif ($i == 3)
-                                    $color = "#a2ff5b";
-                                elseif ($i == 4)
-                                    $color = "#CD7F32";
-                                else
-                                    $color = "";
-                            @endphp
-                            <tr data-row-id="0" style="color: {{ $color }}">
+                        @foreach($submissions as $submission)
+                            <tr data-row-id="0">
                                 <td class="text-left" style="">{{ $i }}</td>
-                                <td class="text-left" style="">{{ $team->teamname }}</td>
-                                <td class="text-left" style="">{{ $team->participant1 }}</td>
-                                <td class="text-left" style="">{{ $team->participant2 }}</td>
-                                <td class="text-left" style="">{{ $team->score }}</td>
+                                <td class="text-left" style="">{{ $submission['questionName'] }}</td>
+                                <td class="text-left" style="">{{ $submission['number'] }}</td>
                             </tr>
                             @php
                                 $i++;

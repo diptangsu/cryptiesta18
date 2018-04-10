@@ -24,6 +24,7 @@ Route::post('/login', 'TeamsController@login');
 Route::get('/logout', 'TeamsController@logout');
 
 Route::get('/leaderboard', 'SubmissionsController@index');
+Route::get('/submissions', 'SubmissionsController@statistics');
 
 Route::get('/questions/{question}', 'QuestionsController@show');
 Route::post('/questions/{question}', 'SubmissionsController@store');

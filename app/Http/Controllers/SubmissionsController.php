@@ -28,6 +28,29 @@ class SubmissionsController extends Controller
         return view('leaderboard', compact('teams'));
     }
 
+    public function statistics()
+    {
+        $allQuestions = Question::all();
+        $n = $allQuestions->count();
+        $allSubmissions = Submission::submissionsPerQuestion()->all();
+
+        $submissions = array();
+        for ($i = 1; $i <= $n; $i++)
+        {
+            $submissions[$i] = array();
+            if (array_key_exists($i, $allSubmissions)) {
+                $submissions[$i]['questionName'] = $allSubmissions[$i]->all()[0]->questionName;
+                $submissions[$i]['number'] = $allSubmissions[$i]->count();
+            } else {
+                $submissions[$i]['questionName'] = $allQuestions[$i - 1]->name;
+                $submissions[$i]['number'] = 0;
+            }
+        }
+
+//        dd($submissions);
+        return view('submissions', compact('submissions'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -64,7 +87,7 @@ class SubmissionsController extends Controller
         if ($question->name == "Password") {
             $ans = Team::where('id', $teamId)->pluck('password')[0];
             if ($ans == $answer)
-                $answer = "password";
+                $answer = "dbwrgoubjuvoblnueiobhfhdulivrbolifsuvb";
         }
 
         $notify = Array();

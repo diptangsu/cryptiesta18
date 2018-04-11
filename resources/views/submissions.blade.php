@@ -63,7 +63,7 @@
                         @foreach($submissions as $submission)
                             <tr data-row-id="0">
                                 <td class="text-left" style="">{{ $i }}</td>
-                                <td class="text-left" style="">{{ $submission['questionName'] }}</td>
+                                <td class="text-left" style="">{!! $submission['questionName'] !!}</td>
                                 <td class="text-left" style="">{{ $submission['number'] }}</td>
                             </tr>
                             @php

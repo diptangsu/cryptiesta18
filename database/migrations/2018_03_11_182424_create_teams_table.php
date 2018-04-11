@@ -35,7 +35,7 @@ class CreateTeamsTable extends Migration
             $table->string('password', 30)->default('disciple');
             $table->integer('score')->default(0);
 
-            $table->integer('timeleft')->default(10800);
+            $table->integer('timeleft')->default(9000);
 
             $table->timestamps();
         });

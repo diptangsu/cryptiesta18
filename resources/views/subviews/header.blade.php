@@ -65,9 +65,11 @@
     </style>
     <div>
         <div class="shadow">
+            <i class="zmdi zmdi-account zmdi-hc-fw"></i>
             {{ $participant2 }}
         </div>
         <div class="shadow">
+            <i class="zmdi zmdi-account zmdi-hc-fw"></i>
             {{ $participant1 }}
         </div>
     </div>

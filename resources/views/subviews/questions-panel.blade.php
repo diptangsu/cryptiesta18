@@ -73,6 +73,6 @@
                 clearInterval(x);
                 location.reload();
             }
-        }, 1030);
+        }, 1000);
     </script>
 @endsection

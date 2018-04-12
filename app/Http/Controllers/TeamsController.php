@@ -114,7 +114,7 @@ class TeamsController extends Controller
 
         $pass = $this->getPassword(request('participant1'), request('participant2'),
                                     request('phone1'), request('phone2'));
-        $password = array('password' => $pass);
+        $password = array('password' => 'caot');
 
         Team::create(request([
                 'teamname',

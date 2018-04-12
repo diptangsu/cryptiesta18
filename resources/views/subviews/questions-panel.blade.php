@@ -18,6 +18,7 @@
             @php
                 $k = 0;
                 $n = count($allSubmissions);
+                // dd($allSubmissions);
                 if ($n == 0) {
                     $allSubmissions[0] = -1;
                 }
@@ -31,8 +32,11 @@
                     @if($ques->id == $allSubmissions[$k])
                         {{--<i class="zmdi zmdi-check-circle zmdi-hc-fw"></i>--}}
                         <?php $k += $k < $n - 1 ? 1 : 0; ?>
+                        @if($allSubmissions[$k] == 11)
+                                <?php $k += $k < $n - 1 ? 1 : 0; ?>
+                        @endif
                         <i class="zmdi zmdi-check-all zmdi-hc-fw"></i>
-                    @else
+                        @else
                         <i class="zmdi zmdi-flag zmdi-hc-fw"></i>
                     @endif
 

@@ -18,7 +18,6 @@
             @php
                 $k = 0;
                 $n = count($allSubmissions);
-                // dd($allSubmissions);
                 if ($n == 0) {
                     $allSubmissions[0] = -1;
                 }

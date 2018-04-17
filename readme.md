@@ -18,7 +18,7 @@ Create two databases
 
 Import the tables from [here](/public/assets/databases)
 
-Goto [`.env.example`](/.env.example) and change line 12 to the specific database `DB_DATABASE=cyberhunt18finals` or `DB_DATABASE=cryptiesta18`
+Go to [`.env.example`](/.env.example) and change line 12 to the specific database `DB_DATABASE=cyberhunt18finals` or `DB_DATABASE=cryptiesta18`
 
 Create a copy of `.env.example` and rename it to `.env`
 

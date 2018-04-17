@@ -11,6 +11,17 @@ Load the migrations/tables in the database using `php artisan migrate`
 
 To launch this website, run the command `php artisan serve`
 
+## How to run website like the event
+Create two databases
+- cryptiesta18
+- cyberhunt18finals
+
+Import the tables from [here](/public/assets/databases)
+
+Goto [`.env`](/.env) and change line 12 to the specific database `DB_DATABASE=cyberhunt18finals` or `DB_DATABASE=cryptiesta18`
+
+Goto [assets](/public/assets) and change the folder name of the questions to be loaded as `questions`
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:

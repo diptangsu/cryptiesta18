@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/new.css"/>
+
+	<script type="text/javascript" src="assets/jquery.1.11.js"></script>
+	<script type="text/javascript" src="assets/sha1.js"></script>
+</head>
+<body>
+	<div class="top-padding">
+	</div>
+	<a name="top"></a>
+	<div class="container">
+		<div class="jumbotron" style="margin-bottom: 75px">
+
+			<div class="padding_div"></div>
+
+			<h4>Client side validation is bad!</h4>
+
+			<hr/>
+
+			<div class="challenge-wrapper">
+				<form action="" method="post">
+					<label>Username</label>
+					<input class="form-control" type="text" name="username" id="cuser" placeholder="Username"/>
+					<label>Password</label>
+					<input class="form-control" type="password" name="password" id="cpass" placeholder="Password"/>
+					<input type="submit" style="margin-top: 12px;" value="Login"
+					class="c_submit form-control btn btn-success"/>
+				</form>
+			</div>
+			<div id="cresponse">
+			</div>
+
+			<script>
+            // Look's like weak JavaScript auth script :)
+            $(".c_submit").click(function (event) {
+            	event.preventDefault()
+            	var u = $("#cuser").val();
+            	var p = $("#cpass").val();
+            	if (u === "admin") {
+            		if(Sha1.hash(p) == "84c103581a452d2cecdb4ac4e17173032fe11bc1")
+            		{
+            			var url = document.location['href'];
+            			var i = url.lastIndexOf("/");
+            			url = url.substr(0, i);
+            			document.location = url + "/assets/" + p + ".html";
+            		}
+            	} else {
+            		$("#cresponse").html("<div class='alert alert-danger'>Wrong password sorry.</div>");
+            	}
+            });
+        </script>
+
+        <hr/>
+
+    </div> <!-- end container -->
+
+    <script>
+    	$(document).ready(function () {
+    		$("#btn-top").click(function (e) {
+    			e.preventDefault();
+    			$("html, body").animate({scrollTop: 0}, "slow");
+    		})
+    	});
+    </script>
+</body>
+</html>
+

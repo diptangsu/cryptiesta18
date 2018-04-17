@@ -18,7 +18,9 @@ Create two databases
 
 Import the tables from [here](/public/assets/databases)
 
-Goto [`.env`](/.env) and change line 12 to the specific database `DB_DATABASE=cyberhunt18finals` or `DB_DATABASE=cryptiesta18`
+Goto [`.env.example`](/.env.example) and change line 12 to the specific database `DB_DATABASE=cyberhunt18finals` or `DB_DATABASE=cryptiesta18`
+
+Create a copy of `.env.example` and rename it to `.env`
 
 Goto [assets](/public/assets) and change the folder name of the questions to be loaded as `questions`
 
